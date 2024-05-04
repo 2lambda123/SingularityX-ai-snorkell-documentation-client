@@ -163,7 +163,7 @@ async def main():
             print("We will immediately help you out.")
             print("################################################################################")
 
-        await notify_error(f"An error occurred: "+traceback.format_exc())
+        await notify_error("An error occurred: "+traceback.format_exc())
         raise e
 
 

@@ -5,7 +5,7 @@ import json
 import traceback
 from pprint import pprint
 
-base_url = f"https://production-gateway.snorkell.ai"
+base_url = "https://production-gateway.snorkell.ai"
 # base_url = "https://8455-2401-4900-1f26-31a3-d13d-e5fe-ee8f-f94d.ngrok-free.app/api/v1/health"
 
 async def notify_error(message):
@@ -154,7 +154,7 @@ async def main():
             print("We will immediately help you out.")
             print("################################################################################")
 
-        await notify_error(f"An error occurred: "+traceback.format_exc())
+        await notify_error("An error occurred: "+traceback.format_exc())
         raise e
 
 
